@@ -76,8 +76,9 @@ if (posicaoSeletor != posicaoSeletorAnterior){
 if (alteracaoDisplay){
 
     lcd.setCursor(8,posicaoSeletor);
-    if (estadosLeds[posicaoSeletor]) lcd.print("LIGADO   ");
-    else lcd.print("DESLIGADO   ");
+    lcd.print(estadosLeds[posicaoSeletor] ? "LIGADO    " : "DESLIGADO");
+
+    //* estadosLeds[posicaoSeletor] ? lcd.print("LIGADO   "); : lcd.print("DESLIGADO   ");
 
 }
 
